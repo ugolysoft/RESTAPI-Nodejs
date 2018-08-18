@@ -4,10 +4,9 @@ const expect = require('chai').expect;
 chai.use(require('chai-http'));
 
 
-
 const app = require('../');
 //const server = require('../').server;
-
+app.listen();
 
 describe('API endpoint questions', () => {
 	
