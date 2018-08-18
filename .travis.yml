@@ -5,5 +5,8 @@ install:
  - npm install
 script:
  - npm test
+after_success:
+ - ./node_modules/.bin/jscoverage lib lib-cov
+ - ./node_modules/.bin/mocha test/test.js -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
  
  
