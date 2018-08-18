@@ -6,7 +6,7 @@ chai.use(require('chai-http'));
 
 const app = require('../');
 //const server = require('../').server;
-app.listen();
+//app.listen();
 
 describe('API endpoint questions', () => {
 	
