@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start": "node server.js"
+    "start": "node server.js",
+	"coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "api",
