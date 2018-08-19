@@ -3,11 +3,11 @@ node_js:
  - "8.11.3"
 install:
  - npm install
-script:
- - npm test
+script: "npm run-script test-travis"
+after_script: "cat ./coverage/lcov.ifo | ./node_modules/coveralls/bin/coveralls.js"
 after_success:
  - ./node_modules/.bin/jscoverage lib lib-cov
- - ./node_modules/.bin/mocha test/**.js -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+ - ./node_modules/.bin/mocha YOUR_TESTS/**.js -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
 
  
  
